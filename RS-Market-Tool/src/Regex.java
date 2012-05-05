@@ -14,7 +14,7 @@ public class Regex {
     private boolean debug = false;
     
     
-    public String format(String input) {
+    public int format(String input) {
         
         //remove most HTML from the stream
         input = input.replaceAll("\\<.*?>" , ",");
@@ -55,6 +55,6 @@ public class Regex {
             itemPriceSTRING = itemPriceSTRING.replace(".", "");//Remove period. Number should now be formated correctly
         }
         
-        return(itemPriceSTRING);
+        return(Integer.parseInt(itemPriceSTRING));
     }
 }

@@ -9,7 +9,7 @@ public class Fetch {
 	//Only save parts of page that are needed.
 	//Send the results to Store class for processing.
 	
-    public String DownloadURL(int itemID) throws MalformedURLException, IOException{
+    public int DownloadURL(int itemID) throws MalformedURLException, IOException{
         //Pass an itemID to be pulled from the site
         URL url = null;
         url = new URL("http://services.runescape.com/m=itemdb_rs/Rune_arrow/viewitem.ws?obj=" +  itemID);
@@ -24,7 +24,6 @@ public class Fetch {
         in.close();
 
         Regex regex = new Regex();
-        //Return the item value as a string
-        return (regex.format(sb.toString()));
-    } 
+        return regex.format(sb.toString());
+    }
 }
