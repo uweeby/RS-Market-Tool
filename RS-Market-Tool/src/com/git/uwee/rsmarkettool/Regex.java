@@ -1,3 +1,4 @@
+package com.git.uwee.rsmarkettool;
 /*Check for different string formats and standardize
  * Examples:
  * 135 = 135
@@ -11,16 +12,12 @@ public class Regex {
     private int currentPRICE;
     private String itemPriceSTRING;
     
-    private boolean debug = false;
-    
-    
     public int format(String input) {
         
         //remove most HTML from the stream
         input = input.replaceAll("\\<.*?>" , ",");
         //convert large string into array
         String[] tempArray = input.split(",");
-        
         
         //This requires additional regex to find the line number
         for(int i = 0;i < tempArray.length; i++){
@@ -33,14 +30,7 @@ public class Regex {
         //If the value is between 1k-10k its price will show up on two lines
         //This combines the two lines. If it is outside this range nothing is changed
         itemPriceSTRING = tempArray[currentPRICE] + tempArray[currentPRICE + 1];
-        
-        if(debug == true){
-            for(int i = 0;i < tempArray.length; i++){
-                //Print all lines
-                System.out.println(tempArray[i]);
-            }
-        }
-        
+
         //Format Thousands. If number ends in k. Ex: 13.1k
         if(itemPriceSTRING.endsWith("k")){ 
             itemPriceSTRING = itemPriceSTRING.substring(0, itemPriceSTRING.length() - 1); //Remove k
