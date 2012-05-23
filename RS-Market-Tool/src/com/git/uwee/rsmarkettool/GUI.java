@@ -39,7 +39,6 @@ public class GUI extends JFrame {
             	//Refresh Super Heat Data:
             	SuperHeatRefresh superheatrefresh = new SuperHeatRefresh();
             	superheatrefresh.run();
-            	System.out.println(superheatTableData[0][1]);
             	
             	//Update the Table Data with changes
             	superheatTable.repaint();
