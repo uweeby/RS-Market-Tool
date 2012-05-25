@@ -11,6 +11,12 @@ Tools
 * 100% Java written in Eclipse
 
 
+Overview
+--------
+* Pulls data from Runescape exchange site.
+* Parse HTML to gather item price information.
+* Display information in easy to ready format.
+
 Version 1.0
 -----------
 * Keeping track of versions now
