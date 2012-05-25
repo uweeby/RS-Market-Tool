@@ -17,9 +17,13 @@ Overview
 * Parse HTML to gather item price information.
 * Display information in easy to ready format.
 
+
+Screenshot
+----------
+[![](http://imgur.com/6KILp.jpg)](http://imgur.com/6KILp.jpg)
+
 Version 1.0
 -----------
 * Keeping track of versions now
 * Rewrote codebase and GUI
 * Making room for addition of skills in future versions
-
