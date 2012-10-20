@@ -3,13 +3,22 @@ package com.git.uwee.rsmarkettool;
 import java.awt.*;
 import javax.swing.*;
 
+@SuppressWarnings("serial")
 public class GUI extends JFrame {
 	
+	//Variable Declaration
 	JLabel superheatHeader;
 	JTable superheatTable;
 	JButton superheatRefreshButton;
 	
-	private String[] superheatColumnNames = {"Ore Type", "Ore Cost", "Coal", "Super Heat Cost", "Bar Value", "Profit"};
+	private String[] superheatColumnNames = {
+			"Ore Type",
+			"Ore Cost",
+			"Coal",
+			"Super Heat Cost",
+			"Bar Value",
+			"Profit"
+			};
 	public static Object[][] superheatTableData = {
 			{"Mithril", 0, 0, 0, 0, 0},
 			{"Adamantite", 0, 0, 0, 0, 0},
@@ -37,13 +46,14 @@ public class GUI extends JFrame {
 		superheatRefreshButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
             	//Refresh Super Heat Data:
-            	SuperHeatRefresh superheatrefresh = new SuperHeatRefresh();
-            	superheatrefresh.run();
+            	RSSuperHeatData superheatrefresh = new RSSuperHeatData();
+            	superheatrefresh.GatherData();
             	
             	//Update the Table Data with changes
             	superheatTable.repaint();
             }
         });
+		
 		//Add Super Heat Refresh Button to screen
 		add(superheatRefreshButton);
     }
