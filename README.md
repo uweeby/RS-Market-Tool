@@ -20,7 +20,7 @@ Overview
 
 Screenshot
 ----------
-[![](http://imgur.com/6KILp.jpg)](http://imgur.com/6KILp.jpg)
+[![](http://imgur.com/E9YbC.png)](http://imgur.com/E9YbC.png)
 
 
 [Demo Link][1]
